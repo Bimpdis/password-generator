@@ -31,16 +31,7 @@ elif C >1212:
 elif C ==1212:
     print('True') #If the number matches the code, print ‘True’.
 
-N = int(input('Please Enter Employee Number: ')) #Enter Employee number.
-
-if N <100:
-    N = 0
-    print('Not Recognised') #If the number is too large, print ‘Not Recognised’.
-elif N >100:
-    N = 0
-    print('Not Recognised') #If the number is too large, print ‘Not Recognised’.
-elif N ==100:
-    print('True') #If the number matches Employee Number, print ‘True’.
+N = int(input('Please Enter Employee Number: ')) #Enter Employee number. 
 
 print(D+C+N) #Correct Password
 ```
@@ -49,5 +40,5 @@ print(D+C+N) #Correct Password
 - make D changeable, using definitive calendar
 - make C and N change D in slices so only ever single digit answer (0-9)
 - make sure C error doesn’t reveal D data
-- make N changeable
+- N is changeable, no matter if it's entered incorrectly. Automated code that is performed separately will produce definitive code per employee per day, regardless of user error.
 - include extra number to define day of the week so codes don’t repeat annually
