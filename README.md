@@ -64,7 +64,23 @@ E = D + C
 
 print(E)
 
-N = int(input('Please Enter Employee Number: ')) #Enter Employee number. 
+# Enter Employee Number. 
+Employee_Number = int(input("Please Enter Employee Number: "))
+
+# List of valid Employee Names and numbers.
+Employee1 = 1000
+Employee2 = 2000
+Employee3 = 3000
+Employee4 = 4000
+Registered_Employee_Names = [Employee1, Employee2, Employee3, Employee4]
+
+
+# Identify if number is in list
+if Employee_Number in Registered_Employee_Names:
+    print("True")
+else:
+    print("False")
+
 
 print(D+C+N) #Correct Password
 ```
