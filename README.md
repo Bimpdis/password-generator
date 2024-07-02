@@ -81,6 +81,14 @@ if Employee_Number in Registered_Employee_Names:
 else:
     print("False")
 
+# Last code entered
+if Employee_Number in Registered_Employee_Names:
+    N = Employee_Number
+    print(N)
+else:
+    print("Create Guest Password?")
+
+
 
 print(D+C+N) #Correct Password
 ```
