@@ -1,24 +1,25 @@
 # password-generator
-Second attempt at creating a unique password generator
+Final attempt at creating a unique password generator
 
 ```python
 # D = Today’s Date.
 # C = 121206 (Code).
 # N = Employee Number.
-# Correct Password = print(D+C+N).
+# W = Today's Day of the Week.
+# Correct Password = print(D+C+N+W).
 ```
 
 ```python
 import datetime
 
-# Get the current date and time
+# Get the current date and time.
 now = datetime.datetime.now()
 
-# Use today's date as integer for 'Correct_Date'
+# Use today's date as integer for 'Correct_Date'.
 Correct_Date = int(now.strftime("%d%m%y"))
 
-# Correct Date - delete when in use
-print(Correct_Date)
+# Correct Date - delete when in use.
+# print(Correct_Date)
 
 # Enter day and month in numerical sequence, no characters.
 D = int(input("Please Enter Number: ")) 
@@ -36,8 +37,11 @@ elif D ==Correct_Date:
     print("True") 
 
 
-# Static code
+# Static code.
 Correct_Code = 121206
+
+# Correct Code - delete when in use.
+# print(Correct_Code)
 
  # Enter unchangeable code.
 C = int(input("Please Enter Code: "))
@@ -62,12 +66,14 @@ if D == 0:
     C = 0
 E = D + C
 
-print(E)
+# Displays 0 when in error - delete when in use.
+# print(E)
 
 # Enter Employee Number. 
 Employee_Number = int(input("Please Enter Employee Number: "))
 
 # List of valid Employee Names and numbers.
+# Simple examples for readability.
 Employee1 = 1000
 Employee2 = 2000
 Employee3 = 3000
@@ -75,27 +81,48 @@ Employee4 = 4000
 Registered_Employee_Names = [Employee1, Employee2, Employee3, Employee4]
 
 
-# Identify if number is in list
+# Identify if entered number is in list.
 if Employee_Number in Registered_Employee_Names:
     print("True")
 else:
     print("False")
 
-# Last code entered
+# Final code entered.
 if Employee_Number in Registered_Employee_Names:
     N = Employee_Number
-    print(N)
+
+# Correct Employee_Number - delete when in use.
+# print(N)
 else:
     print("Create Guest Password?")
 
+Guest_Password = ""
 
+N = Employee_Number or Guest_Password
 
-print(D+C+N) #Correct Password
+# Day of the week.
+W = datetime.datetime.today().weekday()
+
+# Day of the week - delete when in use.
+# print(W)
+
+# Create final password.
+if C == 0:
+    D = 0
+if D == 0:
+    C = 0
+if N == 0:
+    E = 0
+E = D + C + N + W
+
+print("Password: ")
+print(E)
+
 ```
 
 
-- make D changeable, using definitive calendar - COMPLETE
-- make C and N change D in slices so only ever single digit answer (0-9)
-- make sure C error doesn’t reveal D data - COMPLETE
-- N is changeable, no matter if it's entered incorrectly. Automated code that is performed separately will produce definitive code per employee per day, regardless of user error.
-- include extra number to define day of the week so codes don’t repeat annually
+- make D changeable, using definitive calendar - COMPLETE.
+- make C and N change D in slices so only ever single digit answer (0-9) - COMPLETE - C and D can only read as 0 in error. N is user input and can still be read.
+- make sure C error doesn’t reveal D data - COMPLETE.
+- N is changeable, no matter if it's entered incorrectly. Automated code that is performed separately will produce definitive code per employee per day, regardless of user error - COMPLETE.
+- include extra number to define day of the week so codes don’t repeat annually - COMPLETE - year is included instead as a simple precaution.
