@@ -1,35 +1,68 @@
 # password-generator
-First attempt at creating a unique password generator
+Second attempt at creating a unique password generator
 
 ```python
-D = 1303 #Today’s Date.
-C = 1212 #Code.
-N = 100 #Employee Number.
-print(D+C+N) #Correct Password.
+# D = Today’s Date.
+# C = 121206 (Code).
+# N = Employee Number.
+# Correct Password = print(D+C+N).
 ```
 
 ```python
-D = int(input('Please Enter Number: ')) #Enter day and month in numerical sequence, no characters.
+import datetime
 
-if D <1303:
+# Get the current date and time
+now = datetime.datetime.now()
+
+# Use today's date as integer for 'Correct_Date'
+Correct_Date = int(now.strftime("%d%m%y"))
+
+# Correct Date - delete when in use
+print(Correct_Date)
+
+# Enter day and month in numerical sequence, no characters.
+D = int(input("Please Enter Number: ")) 
+
+# If the entered number is too large, print ‘False’. 
+if D <Correct_Date:
     D = 0
-    print('False') #If the number is too large, print ‘False’.
-elif D >1303:
+    print("False")
+# If the number is too small, print ‘False’.
+elif D >Correct_Date:
     D = 0
-    print('False') #If the number is too small, print ‘False’.
-elif D ==1303:
-    print('True') #If the number matches the date, print ‘True’.
+    print("False") 
+# If the number matches the date, print ‘True’.
+elif D ==Correct_Date:
+    print("True") 
 
-C = int(input('Please Enter Code: ')) #Enter unchangeable code.
 
-if C <1212:
+# Static code
+Correct_Code = 121206
+
+ # Enter unchangeable code.
+C = int(input("Please Enter Code: "))
+
+# If the number is too large, print ‘Alert System’.
+if C <121206:
     C = 0
-    print('Alert System') #If the number is too large, print ‘Alert System’.
-elif C >1212:
+    print("Alert System")
+# If the number is too small, print ‘Alert System’. 
+elif C >121206:
     C = 0
-    print('Alert System') #If the number is too small, print ‘Alert System’.
-elif C ==1212:
-    print('True') #If the number matches the code, print ‘True’.
+    print("Alert System")
+# If the number matches the code, print ‘True’. 
+elif C ==121206:
+    print("True") 
+
+
+# Ensure neither Correct_Code or Correct_Date are revealed when there's an error.
+if C == 0:
+    D = 0
+if D == 0:
+    C = 0
+E = D + C
+
+print(E)
 
 N = int(input('Please Enter Employee Number: ')) #Enter Employee number. 
 
@@ -37,8 +70,8 @@ print(D+C+N) #Correct Password
 ```
 
 
-- make D changeable, using definitive calendar
+- make D changeable, using definitive calendar - COMPLETE
 - make C and N change D in slices so only ever single digit answer (0-9)
-- make sure C error doesn’t reveal D data
+- make sure C error doesn’t reveal D data - COMPLETE
 - N is changeable, no matter if it's entered incorrectly. Automated code that is performed separately will produce definitive code per employee per day, regardless of user error.
 - include extra number to define day of the week so codes don’t repeat annually
