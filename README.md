@@ -125,4 +125,4 @@ print(E)
 - make C and N change D in slices so only ever single digit answer (0-9) - COMPLETE - C and D can only read as 0 in error. N is user input and can still be read.
 - make sure C error doesn’t reveal D data - COMPLETE.
 - N is changeable, no matter if it's entered incorrectly. Automated code that is performed separately will produce definitive code per employee per day, regardless of user error - COMPLETE.
-- include extra number to define day of the week so codes don’t repeat annually - COMPLETE - year is included instead as a simple precaution.
+- include extra number to define day of the week so codes don’t repeat annually - COMPLETE - year is included aswell as a simple precaution.
