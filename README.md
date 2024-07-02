@@ -113,6 +113,8 @@ if D == 0:
     C = 0
 if N == 0:
     E = 0
+if E == 0:
+    W = 0
 E = D + C + N + W
 
 print("Password: ")
