@@ -25,15 +25,15 @@ Correct_Date = int(now.strftime("%d%m%y"))
 D = int(input("Please Enter Number: ")) 
 
 # If the entered number is too large, print ‘False’. 
-if D <Correct_Date:
+if D < Correct_Date:
     D = 0
     print("False")
 # If the number is too small, print ‘False’.
-elif D >Correct_Date:
+elif D > Correct_Date:
     D = 0
     print("False") 
 # If the number matches the date, print ‘True’.
-elif D ==Correct_Date:
+elif D == Correct_Date:
     print("True") 
 
 
@@ -47,15 +47,15 @@ Correct_Code = 121206
 C = int(input("Please Enter Code: "))
 
 # If the number is too large, print ‘Alert System’.
-if C <121206:
+if C < 121206:
     C = 0
     print("Alert System")
 # If the number is too small, print ‘Alert System’. 
-elif C >121206:
+elif C > 121206:
     C = 0
     print("Alert System")
 # If the number matches the code, print ‘True’. 
-elif C ==121206:
+elif C == 121206:
     print("True") 
 
 
