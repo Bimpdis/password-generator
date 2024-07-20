@@ -21,7 +21,7 @@ Correct_Date = int(now.strftime("%d%m%y"))
 # Correct Date - delete when in use.
 # print(Correct_Date)
 
-# Enter day and month in numerical sequence, no characters.
+# Enter day, month and year in numerical sequence, no characters (ddmmyy).
 D = int(input("Please Enter Number: ")) 
 
 # If the entered number is too large, print ‘False’. 
@@ -72,8 +72,8 @@ E = D + C
 # Enter Employee Number. 
 Employee_Number = int(input("Please Enter Employee Number: "))
 
-# List of valid Employee Names and numbers.
-# Simple examples for readability.
+# Approved list of valid employee names and numbers.
+# Simple examples for readability. Amend code to import and read a .txt file in practice.
 Employee1 = 1000
 Employee2 = 2000
 Employee3 = 3000
@@ -81,26 +81,30 @@ Employee4 = 4000
 Registered_Employee_Names = [Employee1, Employee2, Employee3, Employee4]
 
 
-# Identify if entered number is in list.
+# Identify if entered number is in approved list.
 if Employee_Number in Registered_Employee_Names:
     print("True")
 else:
     print("False")
 
-# Final code entered.
+# If entered number is in approved list, the final password is ready to be created.
 if Employee_Number in Registered_Employee_Names:
     N = Employee_Number
 
 # Correct Employee_Number - delete when in use.
 # print(N)
+
+# If entered number isn't in the approved list, offer to create a "Guest Password".
 else:
     print("Create Guest Password?")
 
 Guest_Password = ""
 
+# Use the entered number to create a "Guest Password" using the same formula as an authorised password.
+# Previous incorrect entries with a "Guest password" return the same value as the incorrect Employee_Number.
 N = Employee_Number or Guest_Password
 
-# Day of the week.
+# Use the numeric value of the current day of the week as an additional layer of code.
 W = datetime.datetime.today().weekday()
 
 # Day of the week - delete when in use.
