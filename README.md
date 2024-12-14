@@ -1,5 +1,5 @@
 # password-generator
-Final attempt at creating a unique password generator
+Final attempt at creating a rolling password generator
 
 ```python
 # D = Today’s Date.
